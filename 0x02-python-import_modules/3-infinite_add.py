@@ -3,7 +3,7 @@
 if __name__ == "__main__":
     import sys
 
-    total = 0
-    for i in range(len(sys.argv) - 1):
-        total += int(sys.argv[i + 1])
-    print("{}".format(total))
+    S = 0
+    for X in range(len(sys.argv) - 1):
+        S += int(sys.argv[i + 1])
+    print(S)
