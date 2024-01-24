@@ -5,8 +5,10 @@
 class Square:
     def __init__(self, size=0):
         """Initialize new square
+        
         argument:
             size (int): size of square
+        
         Raises:
             typeeerror if size not integer
             valueerror if size less than 0
