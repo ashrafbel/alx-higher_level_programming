@@ -30,3 +30,13 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    def area(self):
+        return (self.__size ** 2)
+
+    def my_print(self):
+        for S in range(0, self.__size):
+            [print("#", end="") for K in range(self.__size)]
+            print("")
+        if self.__size == 0:
+            print("")
