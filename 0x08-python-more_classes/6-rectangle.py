@@ -4,14 +4,14 @@
 
 class Rectangle:
     """Represent a rectangle."""
-    instnacesnumbers = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         "Create rectangle with the option to specify its width and height"
 
         self.width = width
         self.height = height
-        Rectangle.instnacesnumbers += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -68,4 +68,4 @@ class Rectangle:
     def __del__(self):
         """print a message when a Rectangle instance is deleted"""
         print("Bye rectangle...")
-        Rectangle.instnacesnumbers -= 1
+        Rectangle.number_of_instance -= 1
