@@ -55,7 +55,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
         return ((str(self.print_symbol) * self.width + "\n") *
-                self.height)[:1]
+                self.height)[:-1]
 
         S_tr = []
         for X in range(self.__height):
