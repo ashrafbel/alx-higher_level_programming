@@ -77,28 +77,28 @@ first arg invalid:
     >>> add_integer("huge", 0)
     Traceback (most recent call last):
         ...
-    TypeError: a must be an integer or b must be an integer
+    TypeError: a must be an integer
 
 second arg invalid:
 
     >>> add_integer(155553, [])
     Traceback (most recent call last):
         ...
-    TypeError: a must be an integer or b must be an integer
+    TypeError: b must be an integer
 
 Two  args invalid:
 
     >>> add_integer(None, None)
     Traceback (most recent call last):
         ...
-    TypeError: a must be an integer or b must be an integer
+    TypeError: a must be an integer
 
 Test two strings:
 
     >>> add_integer("buff", "size")
     Traceback (most recent call last):
         ...
-    TypeError: a must be an integer or b must be an integer
+    TypeError: a must be an integer
 
 float overflow:
     >>> add_integer(float('inf'), 0)
