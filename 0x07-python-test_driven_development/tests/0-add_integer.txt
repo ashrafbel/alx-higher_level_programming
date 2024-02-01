@@ -58,32 +58,51 @@ float with float:
     >>> add_integer(0.5, 0.5)
     0
 
+Add infinity:
 
+    >>> add_integer(float('inf'), float('-inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
 
-Test first arg invalid:
+Add nan:
+
+    >>> add_integer(0, float('nan'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+first arg invalid:
 
     >>> add_integer("huge", 0)
     Traceback (most recent call last):
         ...
-    TypeError: a must be an integer
+    TypeError: a must be an integer or b must be an integer
 
-Test second arg invalid:
+second arg invalid:
 
     >>> add_integer(155553, [])
     Traceback (most recent call last):
         ...
-    TypeError: b must be an integer
+    TypeError: a must be an integer or b must be an integer
 
-two args invalid:
+Two  args invalid:
 
     >>> add_integer(None, None)
     Traceback (most recent call last):
         ...
-    TypeError: a must be an integer
+    TypeError: a must be an integer or b must be an integer
 
-two strings:
->>> add_integer("buff", "size")
-Traceback (most recent call last):
+Test two strings:
+
+    >>> add_integer("buff", "size")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer or b must be an integer
+
+float overflow:
+    >>> add_integer(float('inf'), 0)
+    Traceback (most recent call last):
     ...
-TypeError: a must be an integer
-
+    OverflowError: cannot convert float infinity to integer
+    
