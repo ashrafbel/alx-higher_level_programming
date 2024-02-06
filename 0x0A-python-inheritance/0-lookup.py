@@ -10,4 +10,4 @@ def lookup(obj):
     Returns:
         The List of attrubutes
     """
-    return dir(obj())
+    return dir(obj)
