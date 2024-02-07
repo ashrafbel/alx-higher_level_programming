@@ -15,7 +15,7 @@ class Student:
         "Obtain a dictionary for the Student representation."
         try:
             for a in attrs:
-                if type(attrs) is not str:
+                if type(a) is not str:
                     return self.__dict__
         except Exception:
             return self.__dict__
