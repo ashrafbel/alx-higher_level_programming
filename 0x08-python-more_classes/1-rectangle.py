@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-"""Defines regtangele class"""
+"""Rectangle Cls"""
 
 
 class Rectangle:
-    """Represent a rectangle."""
+    """Represent rectangle"""
 
     def __init__(self, width=0, height=0):
-        "Create rectangle with the option to specify its width and height"
+        "intialize cls"
 
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Retrieve the width of the rectangle."""
+        """getter width react"""
         return self.__width
 
     @width.setter
@@ -26,7 +26,7 @@ class Rectangle:
 
     @property
     def height(self):
-        "Assign a value to the width of the rectangle."
+        "getter height rect"
         return self.__height
 
     @height.setter
