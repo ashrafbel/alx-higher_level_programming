@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """Represent rectangle"""
+    """Represent a rectangle."""
 
     def __init__(self, width=0, height=0):
         "intialize cls"
@@ -42,11 +42,13 @@ class Rectangle:
         return (self.__width * self.__height)
 
     def perimeter(self):
-        "return perimeter rect"
+        "perimeter of the rect"
         if self.__width == 0 or self.__height == 0:
             return (0)
-        def __str__(self):
-            """return str rect"""
+        return ((self.__width * 2) + (self.__height * 2))
+
+    def __str__(self):
+        """string rect"""
         if self.__width == 0 or self.__height == 0:
             return ("")
 
