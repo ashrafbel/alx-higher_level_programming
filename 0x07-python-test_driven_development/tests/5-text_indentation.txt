@@ -1,0 +1,26 @@
+Import module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+without any delimeters:
+    >>> text_indentation("watashi wa kira duse")
+    watashi wa kira duse
+
+add two space after string:
+    >>> text_indentation("ashraf   ")
+    ashraf
+
+add three space before string:
+    >>> text_indentation("   ashraf")
+    ashraf
+
+emty string:
+    >>> text_indentation("")
+
+two string empty:
+    >>> text_indentation("      ")
+
+normal testing:
+    >>> text_indentation("Hello: is me")
+    Hello:
+    <BLANKLINE>
+    is me
