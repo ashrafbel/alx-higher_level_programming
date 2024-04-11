@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Rectangle Cls"""
+"""Defines regtangele class"""
 
 
 class Rectangle:
@@ -8,7 +8,7 @@ class Rectangle:
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        "intialz cls"
+        "Create rectangle with the option to specify its width and height"
 
         self.width = width
         self.height = height
@@ -16,7 +16,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """getter width react"""
+        """Retrieve the width of the rectangle."""
         return self.__width
 
     @width.setter
@@ -29,7 +29,7 @@ class Rectangle:
 
     @property
     def height(self):
-        "getter height rect"
+        "Assign a value to the width of the rectangle."
         return self.__height
 
     @height.setter
@@ -41,23 +41,35 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """return the area Rect"""
+        """Return the area of the Rectangle."""
         return (self.__width * self.__height)
 
     def perimeter(self):
-        "perimeter of the rect"
+        "Retrieve the perimeter of the rectangle."
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """string rect"""
+        """Return a string rectangle repreentation"""
         if self.__width == 0 or self.__height == 0:
             return ("")
-            return ((str(self.print_symbol) * self.width + "\n") *
-                    self.height)[:-1]
+        return ((str(self.print_symbol) * self.width + "\n") *
+                self.height)[:-1]
+
+        S_tr = []
+        for X in range(self.__height):
+            [S_tr.append('#') for Y in range(self.__width)]
+            if X != self.__height - 1:
+                S_tr.append("\n")
+        return ("".join(S_tr))
+
+    def __repr__(self):
+        """Generate a string representation for the rectangle"""
+        return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        "when instance rec detet printed"
+        """print a message when a Rectangle instance is deleted"""
         print("Bye rectangle...")
         type(self).number_of_instances -= 1
+
