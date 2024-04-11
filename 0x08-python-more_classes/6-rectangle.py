@@ -64,4 +64,4 @@ class Rectangle:
     def __del__(self):
         "when instance rec detet printed"
         print("Bye rectangle...")
-        type(self).number_of_instance -= 1
+        type(self).number_of_instances -= 1
