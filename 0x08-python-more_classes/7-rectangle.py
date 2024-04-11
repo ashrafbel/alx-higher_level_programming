@@ -6,7 +6,6 @@ class Rectangle:
     """Represent a rectangle."""
     number_of_instances = 0
     print_symbol = '#'
-    
 
     def __init__(self, width=0, height=0):
         "intialz cls"
@@ -57,8 +56,6 @@ class Rectangle:
             return ("")
         return ((str(self.print_symbol) * self.width + "\n") *
                 self.height)[:-1]
-  
-
 
     def __del__(self):
         "when instance rec detet printed"
