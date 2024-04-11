@@ -54,13 +54,8 @@ class Rectangle:
         """string rect"""
         if self.__width == 0 or self.__height == 0:
             return ("")
-
-        S_tr = []
-        for X in range(self.__height):
-            [S_tr.append('#') for Y in range(self.__width)]
-            if X != self.__height - 1:
-                S_tr.append("\n")
-        return ("".join(S_tr))
+            return ((str(self.print_symbol) * self.width + "\n") *
+                    self.height)[:-1]
 
     def __del__(self):
         "when instance rec detet printed"
