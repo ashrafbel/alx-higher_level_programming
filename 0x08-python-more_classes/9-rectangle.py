@@ -65,10 +65,6 @@ class Rectangle:
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """Return the Rectangle with the greater area.
-
-        Args:
-            rect_1: first Rectangle
-            rect_2; second Rectangle
         Raises:
             TypeError: If either of rect_1 or rect_2 is not a Rectangle.
         """
@@ -79,3 +75,10 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return (rect_1)
         return (rect_2)
+
+    @classmethod
+    def square(cls, size=0):
+        """instante a new square
+        arg:
+        size: new square size"""
+        return cls(size, size)
