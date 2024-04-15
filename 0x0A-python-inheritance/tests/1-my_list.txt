@@ -6,7 +6,7 @@ Test a regular list:
     >>> my_l.print_sorted()
     [1, 5, 6]
 
-print_sorted method is an instance method:
+Test if instance method:
     >>> type(MyList.__dict__['print_sorted'])
     <class 'function'>
 
@@ -16,40 +16,28 @@ Test if isinstance:
     True
 
 
-Empty list test:
-    >>> ml = MyList()
-    >>> ml.print_sorted()
+Test empty:
+    >>> my_l = MyList()
+    >>> my_l.print_sorted()
     []
 
-Normal list test:
-    >>> ml = MyList([2, 10, 1])
-    >>> ml.print_sorted()
-    [1, 2, 10]
+Test negative numbers sorted:
+    >>> my_l = MyList([-3000, -96, -789545, -44545, -0, -4])
+    >>> my_l.print_sorted()
+    [-789545, -44545, -3000, -96, -4, 0]
 
-Normal list test 2:
-    >>> ml = MyList([1, 4, 2, 3, 5])
-    >>> ml.print_sorted()
-    [1, 2, 3, 4, 5]
-
-Negative ints list test:
-    >>> ml = MyList([-1000, -98, -232565, 0, -23423434, -123])
-    >>> ml.print_sorted()
-    [-23423434, -232565, -1000, -123, -98, 0]
-
-Original list unchanged:
-    >>> ml = MyList([2, 10, 1, -10, 20, 100, 0])
-    >>> ml.print_sorted()
-    [-10, 0, 1, 2, 10, 20, 100]
-    >>> ml
-    [2, 10, 1, -10, 20, 100, 0]
-
-List already in order:
-    >>> ml = MyList([-10, 0, 1, 2, 10, 20, 100])
-    >>> ml.print_sorted()
-    [-10, 0, 1, 2, 10, 20, 100]
+Test negetive and positive:
+    >>> my_l = MyList([-3, 15, 2, -20, 3])
+    >>> my_l.print_sorted()
+    [-20, -3, 2, 3, 15]
 
 Test append:
-    >>> ml = MyList()
-    >>> ml.append(10)
-    >>> ml
-    [10]
+    >>> my_l = MyList()
+    >>> my_l.append(9)
+    >>> my_l
+    [9]
+
+Test order numbers:
+    >>> my_l = MyList([1, 2, 3, 4, 5, 6])
+    >>> my_l.print_sorted()
+    [1, 2, 3, 4, 5, 6]
