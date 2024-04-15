@@ -3,6 +3,6 @@
 
 
 def inherits_from(obj, a_class):
-    """check if an object is a true subclass of a class."""
+    """Check if an object is a true subclass of a class."""
     b = isinstance(obj, a_class) and type(obj) != a_class
     return b
