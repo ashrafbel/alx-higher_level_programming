@@ -15,7 +15,6 @@ Test if isinstance:
     >>> isinstance(my_l, list)
     True
 
-
 Test empty:
     >>> my_l = MyList()
     >>> my_l.print_sorted()
