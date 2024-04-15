@@ -1,0 +1,16 @@
+Import function from module:
+    >>> MyList = __import__('1-my_list').MyList
+
+Test a regular list:
+    >>> my_l = MyList([1, 5, 6])
+    >>> my_l.print_sorted()
+    [1, 5, 6]
+
+print_sorted method is an instance method:
+    >>> type(MyList.__dict__['print_sorted'])
+    <class 'function'>
+
+Test if isinstance:
+    >>> my_l = MyList()
+    >>> isinstance(my_l, list)
+    True
