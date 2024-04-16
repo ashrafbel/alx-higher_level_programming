@@ -2,7 +2,7 @@
 """Defines a function that adds attributes"""
 
 
-def add_attribute(ob, at, val):
-    if not hasattr(ob, "__dict__"):
+def add_attribute(obj, at, val):
+    if not hasattr(obj, "__dict__"):
         raise TypeError("can't add new attribute")
-    setattr(ob, at, val)
+    setattr(obj, at, val)
