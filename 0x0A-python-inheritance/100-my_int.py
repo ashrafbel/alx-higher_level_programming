@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""Defines a class MyInt that inherits from int."""
-
+"""class Myint"""
 
 class MyInt(int):
-    """A rebel integer class with inverted equality operators."""
+    """MyInt class that inherits"""
 
     def __eq__(self, other):
-        """Override the == operator to invert its behavior."""
+        """Modify the behavior of the == operator to have the opposite effect."""
         return super().__ne__(other)
 
     def __ne__(self, other):
-        """Override the != operator to invert its behavior."""
+        """Modify the behavior of the != operator to have the opposite effect"""
         return super().__eq__(other)
