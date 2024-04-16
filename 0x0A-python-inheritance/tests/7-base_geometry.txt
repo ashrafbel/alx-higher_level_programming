@@ -1,0 +1,65 @@
+Import function from module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Correct Class Type test:
+    >>> x = BaseGeometry()
+    >>> type(x) == BaseGeometry
+    True
+
+if area is an instance method:
+    >>> type(BaseGeometry.__dict__['area'])
+    <class 'function'>
+
+area method called via class with no args:
+    >>> x.__class__.area()
+    Traceback (most recent call last):
+    TypeError: area() missing 1 required positional argument: 'self'
+
+args test (1 arg):
+    >>> x.area(20)
+    Traceback (most recent call last):
+    TypeError: area() takes 1 positional argument but 2 were given
+
+area method normal test:
+    >>> x.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+is an instance method:
+    >>> type(BaseGeometry.__dict__['integer_validator'])
+    <class 'function'>
+
+no args:
+    >>> x.__class__.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+
+method arg test (0 args):
+    >>> x.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    
+method arg test (3 args):
+    >>> x.integer_validator(5, 4, 6)
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+method float.0 value:
+    >>> x.integer_validator("zizo", 4.0)
+    Traceback (most recent call last):
+    TypeError: zizo must be an integer
+
+method float.x value:
+    >>> x.integer_validator("arg", 3.14)
+    Traceback (most recent call last):
+    TypeError: arg must be an integer
+
+ method string value:
+    >>> x.integer_validator("Bar", "bar")
+    Traceback (most recent call last):
+    TypeError: Bar must be an integer
+
+method list value:
+    >>> x.integer_validator("is", [4])
+    Traceback (most recent call last):
+    TypeError: is must be an integer
