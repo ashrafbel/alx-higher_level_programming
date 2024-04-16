@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class MyInt(int):
     """A class named MyInt that inherits"""
 
