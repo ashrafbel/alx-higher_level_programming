@@ -4,6 +4,6 @@
 
 def read_file(filename=""):
     """function read txt file"""
-    U = utf-8
+    U = "utf-8"
     with open(filename, encoding=U) as F_l:
         print(f_l.read(), end="")
