@@ -8,11 +8,9 @@ if __name__ == "__main__":
     load_from_json_file = __import__('6-load_from_json_file')\
             .load_from_json_file
 
-lisAr = (sys.argv[1:])
-try:
-    List_ = load_from_json_file("add_item.json")
-except FileNotFoundError:
-    List_ = []
-    
-List_.extend(lisAr)
-save_to_json_file(List_, "add_item.json")
+    try:
+        items = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        List_ = []
+    List_.extend(sys.argv[1:])
+    save_to_json_file(List_, "add_item.json")
