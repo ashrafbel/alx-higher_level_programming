@@ -9,7 +9,7 @@ if __name__ == "__main__":
             .load_from_json_file
 
     try:
-        items = load_from_json_file("add_item.json")
+        List_ = load_from_json_file("add_item.json")
     except FileNotFoundError:
         List_ = []
     List_.extend(sys.argv[1:])
