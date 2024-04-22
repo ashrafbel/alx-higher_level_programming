@@ -87,3 +87,10 @@ class Rectangle(Base):
         rect_str = f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
         rect_str += f"{self.width}/{self.height}"
         return rect_str
+
+    def update(self, *args):
+        "update instanse attr using args/kwargs"
+        if args:
+            A = ["id", "width", "height", "x", "y"]
+            for n, ag in enumerate(args):
+                setattr(self, A[n], ag)
