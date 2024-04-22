@@ -15,6 +15,7 @@ class Square(Rectangle):
         return square_str
 
     @property
+    "size of rect"
     sz = self.width
     return sz
     
