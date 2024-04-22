@@ -73,4 +73,3 @@ class Rectangle(Base):
         "determin the area"
         Area = self.width * self.height
         return Area
-
