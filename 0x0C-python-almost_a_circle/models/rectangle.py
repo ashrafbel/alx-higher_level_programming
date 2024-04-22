@@ -73,3 +73,9 @@ class Rectangle(Base):
         "determin the area"
         Area = self.width * self.height
         return Area
+
+    def __str__(self):
+        "Provides string info about this rectangle"
+        rect_str = f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
+        rect_str += f"{self.width}/{self.height}"
+        return rect_str
