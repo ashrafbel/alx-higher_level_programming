@@ -21,6 +21,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, val):
         "setter of width"
+        self.valid_int_("width", val, False)
         self.__width = val
 
     @property
@@ -32,6 +33,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, val):
         "setter height"
+        self.valid_int_("height", val, False)
         self.__height = val
 
     @property
@@ -43,6 +45,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, val):
         "setter x"
+        self.valid_int_("x", val)
         self.__x = val
 
     @property
@@ -53,5 +56,15 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, val):
+        self.valid_int_("y", val)
         "seter y"
         self.__y = val
+
+    def valid_int_(self, name_att, val, equal=True):
+        "Function to validate the input value."
+        if not isinstance(val, int):
+            raise TypeError("{} must be an integer".format(name_att))
+        if not equal and val <= 0:
+            raise ValueError("{} must be > 0".format(name_att))
+        if equal and val < 0:
+            raise ValueError("{} must be >= 0".format(name_att))
