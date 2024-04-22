@@ -81,7 +81,7 @@ class Rectangle(Base):
         R = X + "#" * self.width + "\n"
         rect = R * self.height
         print(Y + rect, end='')
-  
+
     def __str__(self):
         "Provides string info about this rectangle"
         rect_str = f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
