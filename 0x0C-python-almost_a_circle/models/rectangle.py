@@ -95,7 +95,7 @@ class Rectangle(Base):
         elif kwargs:
             self._up_date_(**kwargs)
 
-    def _up_dat_e(self, *args, **kwargs):
+    def _up_date_(self, *args, **kwargs):
         if args:
             if len(args) >= 1:
                 self.id = args[0]
