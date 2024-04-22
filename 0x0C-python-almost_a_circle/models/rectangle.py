@@ -92,8 +92,6 @@ class Rectangle(Base):
         "Updates instance attributes."
         if args:
             self._up_date_(*args)
-        elif kwargs:
-            self._up_date_(**kwargs)
 
     def _up_date_(self, *args, **kwargs):
         if args:
@@ -107,7 +105,3 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) >= 5:
                 self.y = args[4]
-        else:
-            for K, val in kwargs.items():
-                setattr(self, K, val)
-
