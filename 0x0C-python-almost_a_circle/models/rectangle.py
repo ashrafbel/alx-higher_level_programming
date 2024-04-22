@@ -89,11 +89,6 @@ class Rectangle(Base):
         return rect_str
 
     def update(self, *args, **kwargs):
-        "Updates instance attributes."
-        if args:
-            self._up_date_(*args)
-
-    def _up_date_(self, *args, **kwargs):
         if args:
             if len(args) >= 1:
                 self.id = args[0]
