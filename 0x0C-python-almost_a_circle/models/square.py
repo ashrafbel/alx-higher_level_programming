@@ -13,3 +13,12 @@ class Square(Rectangle):
         square_str = f"[Square] ({self.id}) {self.x}/{self.y} - "
         square_str += f"{self.width}"
         return square_str
+
+    @property
+    sz = self.width
+    return sz
+    
+    @size.setter
+    "square setter"
+    self.width = val
+    self.height = val
