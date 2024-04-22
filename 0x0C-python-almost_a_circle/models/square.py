@@ -14,12 +14,12 @@ class Square(Rectangle):
         square_str += f"{self.width}"
         return square_str
 
-    @property
-    "size of rect"
-    sz = self.width
-    return sz
-    
-    @size.setter
-    "square setter"
-    self.width = val
-    self.height = val
+    @property:
+        "size of rect"
+        sz = self.width
+        return sz
+
+    @size.setter:
+        "square setter"
+        self.width = val
+        self.height = val
