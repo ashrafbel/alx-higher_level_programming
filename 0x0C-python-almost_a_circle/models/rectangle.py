@@ -55,3 +55,64 @@ class Rectangle(Base):
     def y(self, val):
         self.valid_int_("y", val)
         self.__y = val
+
+    def valid_int_(self, name_att, val, equal=True):
+        "Function to validate the input value."
+        if not isinstance(val, int):
+            raise TypeError("{} must be an integer".format(name_att))
+        if not equal and val <= 0:
+            raise ValueError("{} must be > 0".format(name_att))
+        if equal and val < 0:
+            raise ValueError("{} must be >= 0".format(name_att))
+
+    def area(self):
+        "determin the area"
+        Area = self.width * self.height
+        return Area
+
+    def display(self):
+        "Outputs the string representation of this rectangle."
+        Y = "\n" * self.y
+        X = " " * self.x
+        R = X + "#" * self.width + "\n"
+        rect = R * self.height
+        print(Y + rect, end='')
+
+    def __str__(self):
+        "Provides string information about this rectangle"
+        rectangle_str = f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
+        rectangle_str += f"{self.width}/{self.height}"
+        return rectangle_str
+
+    def update(self, *args, **kwargs):
+        "Updates instance attributes."
+        if args:
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
+
+    def __update(self, *args, **kwargs):
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
+        else:
+            for K, val in kwargs.items():
+                setattr(self, K, val)
+
+    def to_dictionary(self):
+        "Return dict representation of this class."
+        return{
+            "x": self.x,
+            "y": self.y,
+            "id": self.id,
+            "height": self.height,
+            "width": self.width
+        }
