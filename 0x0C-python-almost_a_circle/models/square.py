@@ -14,12 +14,14 @@ class Square(Rectangle):
         square_str += f"{self.width}"
         return square_str
 
-    @property:
+    @property
+    def size(slef):
         "size of rect"
         sz = self.width
         return sz
 
-    @size.setter:
+    @size.setter
+    def size(self, val):
         "square setter"
         self.width = val
         self.height = val
