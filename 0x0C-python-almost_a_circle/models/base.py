@@ -54,7 +54,7 @@ class Base:
             Newinstance = cls(1)
         Newinstance.update(**dictionary)
         return Newinstance
-    
+
     @classmethod
     def load_from_file(cls):
         "Load instances from a file."
