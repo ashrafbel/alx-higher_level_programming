@@ -15,7 +15,7 @@ class Square(Rectangle):
         return square_str
 
     @property
-    def size(slef):
+    def size(self):
         "size of rect"
         sz = self.width
         return sz
