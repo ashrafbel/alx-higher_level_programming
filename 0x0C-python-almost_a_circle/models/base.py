@@ -47,9 +47,9 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         "create and returns an instance with attr"
-        if cls.__name__ == "Rectangel":
-            Newinstance = cls(1,1)
-        else:
+        if cls.__name__ == "Rectangle":
+            Newinstance = cls(1, 1)
+        elif cls.__name__ == "Square":
             Newinstance = cls(1)
         Newinstance.update(**dictionary)
         return Newinstance
