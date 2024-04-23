@@ -25,7 +25,7 @@ class Square(Rectangle):
         "square setter"
         self.width = val
         self.height = val
-    
+
     def update(self, *args, **kwargs):
         "update instance by using args/kwargs"
         if args:
