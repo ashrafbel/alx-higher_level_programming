@@ -34,6 +34,7 @@ class Base:
         with open(J, "w", encoding=U) as fl:
             fl.write(cls.to_json_string(list_objs))
 
+    @classmethod
     def from_json_string(json_string):
         "returns the list as a json_string representation"
         if json_string is None or not json_string:
@@ -42,3 +43,14 @@ class Base:
         else:
             L = loads(json_string)
             return L
+
+    @classmethod
+    def create(cls, **dictionary):
+        "create and returns an instance with attr"
+        if cls.__name__ == "Rectangel":
+            Newinstance = cls(1,1)
+        else:
+            Newinstance = cls(1)
+        Newinstance.update(**dictionary)
+        return Newinstance
+
