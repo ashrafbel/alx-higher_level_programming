@@ -29,21 +29,9 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         "update instance by using args/kwargs"
         if args:
-            self._upda_te(*args)
+            A = ["id", "size", "x", "y"]
+            for n, ag in enumerate(args):
+                setattr(self, A[n], ag)
         elif kwargs:
-            self._upda_te(**kwargs)        
-    
-    def _upda_te(self, *args, **kwargs):
-        if args:
-            if len(args) >= 1:
-                self.id = args[0]
-            if len(args) >= 2:
-                self.width = args[1]
-                self.height = args[1]
-            if len(args) >= 3:
-                self.x = args[2]
-            if len(args) >= 4:
-                self.y = args[3]
-        else:
             for K, val in kwargs.items():
                 setattr(self, K, val)
