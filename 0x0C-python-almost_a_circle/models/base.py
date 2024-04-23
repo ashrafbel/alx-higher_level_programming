@@ -33,3 +33,12 @@ class Base:
         U = "utf-8"
         with open(J, "w", encoding=U) as fl:
             fl.write(cls.to_json_string(list_objs))
+
+    def from_json_string(json_string):
+        "returns the list as a json_string representation"
+        if json_string is None or not json_string:
+            x = []
+            return x
+        else:
+            L = loads(json_string)
+            return L
