@@ -21,5 +21,5 @@ class Base:
         if list_dictionaries is None or not list_dictionaries:
             return "[]"
         else:
-            D = dumps[list_dictionaries]
+            D = dumps(list_dictionaries)
             return D
