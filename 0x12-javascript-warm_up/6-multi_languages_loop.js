@@ -4,6 +4,6 @@
 
 const arrayofstring = ['C is fun', 'Python is cool', 'Javascript is amazing'];
 
-for(let idx = 0; idx < 3; idx++) {
+for(let idx = 0; idx < arrayofstring.length; idx++) {
 	console.log(arrayofstring[idx]);
 }
