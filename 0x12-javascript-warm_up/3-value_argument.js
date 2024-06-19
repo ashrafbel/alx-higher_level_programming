@@ -1,5 +1,6 @@
 #!/usr/bin/node
-// this script for prints the first argument passed to it
+
+// This line defines the path to the interpreter that will execute the script
 
 if (process.argv[2] === undefined) {
   console.log('No argument');
