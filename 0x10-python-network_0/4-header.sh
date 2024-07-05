@@ -1,3 +1,3 @@
 #!/bin/bash
-# send GET HTTP request with header variable `X-HolbertonSchool-User-Id` of 98
+# Script to GET URL with custom header and show response body
 curl -sH 'X-HolbertonSchool-User-Id:98' "$1"
