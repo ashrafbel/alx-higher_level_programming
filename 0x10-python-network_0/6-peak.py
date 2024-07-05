@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-"""Defines a peak-finding algorithm."""
+"defines a peak-finding algorithm"
+
+
 def find_peak(list_of_integers):
     if not list_of_integers:
         return None
+    r = len(list_of_integers) - 1
+    lt = 0
+    while lt < r:
+        m = (lt + r) // 2
 
-    left = 0
-    right = len(list_of_integers) - 1
-
-    while left < right:
-        mid = (left + right) // 2
-
-        if list_of_integers[mid] < list_of_integers[mid + 1]:
-            left = mid + 1
+        if list_of_integers[m] > list_of_integers[m + 1]:
+            r = m
         else:
-            right = mid
-
-    return list_of_integers[left]
+            lt = m + 1
+    return list_of_integers[lt]
