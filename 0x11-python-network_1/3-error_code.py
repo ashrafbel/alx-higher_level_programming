@@ -13,5 +13,5 @@ if __name__ == "__main__":
             body = rs.read().decode('utf-8')
             print(body)
     except urllib.error.HTTPError as e:
-        print(f"Error code: {e.code}")
+         print('Error code:', er.code)
 
