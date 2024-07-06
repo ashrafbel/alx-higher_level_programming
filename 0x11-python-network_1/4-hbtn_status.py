@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-"this script for fetches status url"
+"""this script for fetches https://alx-intranet.hbtn.io/status"""
 import requests
-
-
 if __name__ == "__main__":
-    url = 'https://alx-intranet.hbtn.io/status'
-    rs = requests.get(url)
-    
-    if rs.status_code == 200:
-        print("- body:")
-        print("\t- type:", type(rs.text))
-        print("\t- content:", rs.text)
+    r = requests.get('https://alx-intranet.hbtn.io/status')
+    rs = r.text
+    print("Body response:")
+    print("\t- type: {}".format(type(rs)))
+    print("\t- content: {}".format(rs))
