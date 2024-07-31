@@ -9,17 +9,17 @@ request(apiUrl, function (err, response, body) {
     console.error(err);
     return;
   }
-  const taskat = JSON.parse(body);
-  const comleteTask = {};
+  const tasks = JSON.parse(body);
+  const takscomplete = {};
 
-  taskat.forEach(task => {
-    if (taskat.completed) {
-      if (!comleteTask[taskat.userId]) {
-        comleteTask[taskat.userId] = 0;
+  tasks.forEach(task => {
+    if (task.completed) {
+      if (!takscomplete[task.userId]) {
+        takscomplete[task.userId] = 0;
       }
-      comleteTask[taskat.userId]++;
+      takscomplete[task.userId]++;
     }
   });
 
-  console.log(comleteTask);
+  console.log(takscomplete);
 });
